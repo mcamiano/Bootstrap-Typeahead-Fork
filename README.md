@@ -1,3 +1,6 @@
+
+# This is a fork (of a fork (of a fork)) of Bootstrap Typeahead that adds a ui delay to reduce the number of server requests made. 
+
 # This is a fork (of a fork) of Bootstrap Typeahead that adds minimal but powerful extensions.
 Original Bootstrap code :: http://twitter.github.com/bootstrap/assets/js/bootstrap-typeahead.js
 

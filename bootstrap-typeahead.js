@@ -33,6 +33,8 @@
     this.strings = true
     this.shown = false
     this.listen()
+    this.timer_lookup = false
+    this.timer_timeout = this.options.timeout || 400
   }
 
   Typeahead.prototype = {
@@ -256,7 +258,9 @@
 
         default:
           if($(this.$element).val().length >=this.options.minLength) {
-            this.lookup();
+            var that = this
+            clearTimeout(this.timer_lookup)
+            this.timer_lookup = setTimeout(function(){that.lookup()}, this.timer_timeout)
           } else {
             this.hide()
           }
